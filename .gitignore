@@ -1,0 +1,8 @@
+# local
+node_modules
+
+# environment
+.env.local
+
+# misc
+public/uploads
