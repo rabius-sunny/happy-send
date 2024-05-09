@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const { notFoundHandler, errorHandler } = require('./middlewares/errorHandler')
+const connectDb = require('./configs/connectDb')
 
 const PORT = process.env.PORT || 3000
 
@@ -11,6 +12,7 @@ const app = express()
 dotenv.config()
 
 // database connection
+connectDb()
 
 // request parsers
 app.use(express.json())
